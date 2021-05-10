@@ -17,6 +17,7 @@ export const PaginationHookDemo: React.FC = ({}) => {
 
   return (
     <div
+      data-test-id="hook"
       style={{
         padding: '1rem',
         boxShadow: '2px 2px 7px 0 gray',
