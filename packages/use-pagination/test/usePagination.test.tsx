@@ -231,6 +231,14 @@ describe('@bazhe/usePagination', () => {
         next_page: 7,
         previous_page: 5,
       });
+
+      // Change current_page to out of range
+      act(() => {
+        result.current.setCurrentPage(30);
+      });
+      expect(result.current.paginationResult.current_page).toBe(
+        result.current.paginationResult.total_pages
+      );
     });
   });
 });

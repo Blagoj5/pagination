@@ -1,4 +1,4 @@
-import { Reducer, useEffect, useReducer } from 'react';
+import { Reducer, useEffect, useReducer, useRef } from 'react';
 import {
   changeCurrentPage,
   changeItems,
@@ -23,14 +23,17 @@ export const usePagination = <I>(paginationOptions: PaginatorOptions<I>) => {
     paginationReducer<I>(), // returns the reducer itself with the speciefied generic type
     initialPaginationReducerState<I>(paginationOptions)
   );
+  const calledOnce = useRef(false);
 
   useEffect(() => {
     // Only initially called
     if (
       paginationResult?.items?.length === 0 &&
       paginationOptions.items &&
-      paginationOptions.items.length !== 0
+      paginationOptions.items.length !== 0 &&
+      !calledOnce.current
     ) {
+      calledOnce.current = true;
       setItems(paginationOptions.items);
     }
 
