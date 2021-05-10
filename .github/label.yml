@@ -2,17 +2,13 @@ examples:
   - example/*
   - example/**/*
 
-react:
-  - packages/react/*
-  - packages/react/**/*
+use-paginator:
+  - packages/use-pagination/*
+  - packages/use-pagination/**/*
 
-utils:
-  - packages/utils/*
-  - packages/utils/**/*
-
-cypress:
-  - cypress/*
-  - cypress/**/*
+paginator:
+  - packages/paginator/*
+  - packages/paginator/**/*
 
 repo:
   - ./*
