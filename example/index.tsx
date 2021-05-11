@@ -1,16 +1,12 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { PaginatorDemo } from './components/PaginatorDemo';
-import { PaginationHookDemo } from './components/PaginationHookDemo';
+import './tailwind.output.css';
+import Home from './components/Home';
+import * as ReactMarkdown from 'react-markdown';
 
 const App = () => {
-  return (
-    <div style={{background: '#efe8e8', minHeight: '100vh', padding: '4rem'}}>
-      <PaginatorDemo />
-      <PaginationHookDemo />
-    </div>
-  );
+  return <Home />;
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));
