@@ -49,7 +49,7 @@ export const Drawer: React.FC<DrawerProps> = ({}) => {
             textTransform="capitalize"
             color="black"
           >
-            <Link p={4} cursor="pointer" d="block">
+            <Link p={4} cursor="pointer" d="block" href={`#${item}`}>
               {item}
             </Link>
             <Divider />

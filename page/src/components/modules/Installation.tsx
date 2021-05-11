@@ -18,6 +18,7 @@ yarn install @bazhe/pagination
 
 or you can install each package individually:
 
+
 ### use-pagination
 
 Just the hook, no hoc or wrappers (keep in mind that this also installs @bazhe/paginator):
@@ -60,21 +61,22 @@ export const Installation: React.FC<InstallationProps> = ({}) => {
             <Heading as="h1" size="xl" mb={4} {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <Heading as="h2" size="lg" mb={4} {...props} />
+            <Heading as="h2" size="lg" my={4} {...props} />
           ),
           h3: ({ node, ...props }) => (
-            <Heading as="h3" size="md" mb={4} {...props} />
+            <Heading as="h3" size="md" my={4} {...props} />
           ),
           h4: ({ node, ...props }) => (
-            <Heading as="h4" size="sm" mb={4} {...props} />
+            <Heading as="h4" size="sm" my={4} {...props} />
           ),
           h5: ({ node, ...props }) => (
-            <Heading as="h5" size="xs" mb={4} {...props} />
+            <Heading as="h5" size="xs" my={4} {...props} />
           ),
           pre: ({ node, ...props }) => (
             <Box
               as="pre"
               py={4}
+              px={2}
               shadow="inner"
               bg="gray.100"
               mb={4}
