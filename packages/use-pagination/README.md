@@ -8,8 +8,6 @@ React hook for handling your pagination. Depends on @bazhe/paginator
 
 ## Getting Started
 
-These instructions will get you started on using usePagination hook
-
 ### Prerequisites
 
 You need to have react-dom and react above version 16
@@ -20,8 +18,6 @@ You need to have react-dom and react above version 16
 ```
 
 ### Installing
-
-Say what the step will be
 
 npm
 
@@ -75,7 +71,7 @@ export const PaginationHookDemo: React.FC = () => {
 
 ## API
 
-### Pagination Options (type: PaginatorOptions\<Item> for typescript users)
+### Pagination Options
 
 | Name         | Type                | Default      | Description                                                                                                              |
 | ------------ | ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -87,11 +83,11 @@ export const PaginationHookDemo: React.FC = () => {
 
 <br />
 
-### Pagination Return (type: PaginationResults\<Item> for typescript users)
+### Pagination Return
 
 #### Pagination result:
 
-- **paginationResults**
+- **paginationResult**
 
 | Name              | Type                | Description                                                                                                               |
 | ----------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |
@@ -114,7 +110,7 @@ export const PaginationHookDemo: React.FC = () => {
 
 <br />
 
-#### Pagination result methods for handling state:
+#### Pagination methods for handling state:
 
 - **setCurrentPage**: (n: number) => void (function for changing the current page)
 
