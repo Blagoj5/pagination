@@ -1,6 +1,6 @@
 # @bazhe/with-pagination
 
-React Wrapper Component for handling your pagination. Depends on: [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator)
+React Wrapper Component for handling your pagination
 
 <!-- TODO: Full documentation on: link#use-pagination -->
 
@@ -138,6 +138,7 @@ The pagination result passed to the children callback or the pagination props pa
 
 Depends on:
 
+- [@bazhe/use-pagination](https://www.npmjs.com/package/@bazhe/use-pagination) - Used usePagination hook for the pagination logic
 - [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator) - The utilities used
 
 ## Versioning

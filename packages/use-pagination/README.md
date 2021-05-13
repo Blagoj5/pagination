@@ -2,6 +2,7 @@
 
 React hook for handling your pagination. Depends on: [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator)
 
+<!-- TODO: add playground link everywhere -->
 <!-- TODO: Full documentation on: link#use-pagination -->
 
 ## Getting Started
