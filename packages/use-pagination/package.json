@@ -5,8 +5,8 @@
   "author": "Blagoj Petrov",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mono/mono.git",
-    "directory": "packages/react"
+    "url": "git+https://https://github.com/Blagoj5/pagination.git",
+    "directory": "packages/use-pagination"
   },
   "scripts": {
     "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",

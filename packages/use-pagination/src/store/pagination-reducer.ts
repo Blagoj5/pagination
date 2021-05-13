@@ -25,6 +25,7 @@ export const paginationReducer = <ItemType>() => (
         ...state,
         paginationOptions: {
           ...state.paginationOptions,
+          items: action.items,
           currentPage: action.currentPage,
         },
         paginationResult: generatePaginator<ItemType>({
@@ -36,6 +37,10 @@ export const paginationReducer = <ItemType>() => (
     case 'CHANGE_ITEMS':
       return {
         ...state,
+        paginationOptions: {
+          ...state.paginationOptions,
+          items: action.items,
+        },
         paginationResult: generatePaginator<ItemType>({
           ...state.paginationOptions,
           items: action.items,
