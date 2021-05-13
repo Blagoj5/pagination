@@ -12,8 +12,6 @@ These instructions will get you started on using paginator utilities
 
 ### Installing
 
-Say what the step will be
-
 npm
 
 ```
@@ -38,8 +36,6 @@ import { generatePaginator } from '@bazhe/paginator'; // Implements Paginator cl
 ```
 
 ### Initialization
-
-<!-- TODO ADD LINK TO paginationOptions -->
 
 **generatePaginator** accepts paginationOptions as argument
 
@@ -69,7 +65,18 @@ export const Paginator: React.FC = () => {
 
 ## API
 
-### Pagination Options
+API for:
+
+- generatePaginator(**paginationOptions**)
+- new Paginator(perPage, links)
+
+### Parameters
+
+#### generatePaginator(**paginationOptions**):
+
+<br/>
+
+**Pagination Options**
 
 | Name         | Type                | Default      | Description                                                                                                              |
 | ------------ | ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -81,7 +88,20 @@ export const Paginator: React.FC = () => {
 
 <br />
 
-### Pagination Return
+#### Paginator
+
+| Name                                        | Type                                                                                | Description                                                                                     |
+| ------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| constructor(perPage: number, links: number) |                                                                                     | The constructor that creates paginator object. Example: new Paginator(4, 10)                    |
+| build                                       | \<T>(total_results: number, current_page?: number, items?: T[]) => PaginationResult | The main methods that returns the fully expected pagination result                              |
+| getFirstPage                                | (currentPage: number) => number                                                     | Gets first page, depending on the number of links (ex. buttons displayed in the pagination bar) |
+| getLastPage                                 | (currentPage: number) => number                                                     | Gets last page, depending on the number of links (ex. buttons displayed in the pagination bar)  |
+| getFirstResult                              | (currentPage: number) => number                                                     | Gets first result/index, depending on the limit/perPage and current page                        |
+| getLastResult                               | (currentPage: number) => number                                                     | Gets last result/index, depending on the limit/perPage and current page                         |
+
+### Pagination Result/Return
+
+The result from generatePaginator or Paginator.build:
 
 | Name              | Type                | Description                                                                                                               |
 | ----------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------- |

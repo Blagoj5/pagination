@@ -41,9 +41,9 @@ import { usePagination } from '@bazhe/use-pagination';
 
 ### Initialization
 
-<!-- TODO ADD LINK TO paginationOptions -->
+<!-- TODO: add link to pagination options -->
 
-**usePagination** accepts paginationOptions as argument
+Syntax: **usePagination(paginationOptions)**
 
 ```js
 export const PaginationHookDemo: React.FC = () => {
@@ -69,7 +69,11 @@ export const PaginationHookDemo: React.FC = () => {
 
 ## API
 
-### Pagination Options
+### Parameters
+
+usePagination(paginationOptions) accepts 1 parameter:
+
+#### Pagination Options
 
 | Name         | Type                | Default      | Description                                                                                                              |
 | ------------ | ------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
@@ -81,9 +85,9 @@ export const PaginationHookDemo: React.FC = () => {
 
 <br />
 
-### Pagination Return
+### Pagination Result/Return
 
-#### Pagination result:
+The result from usePagination hook:
 
 - **paginationResult**
 
@@ -119,9 +123,9 @@ export const PaginationHookDemo: React.FC = () => {
 
 ## Built With
 
-<!-- TODO ADD -->
+Depends on:
 
-- [@bazhe/paginator](http://www.dropwizard.io/1.0.2/docs/) - The utilities used
+- [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator) - The utilities used
 
 ## Versioning
 
