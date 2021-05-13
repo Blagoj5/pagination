@@ -1,7 +1,7 @@
 {
   "name": "@bazhe/paginator",
   "version": "1.0.0",
-  "description": "Paginator class for handling pagination logic",
+  "description": "Pagination utilties for handling pagination logic",
   "author": "Blagoj Petrov",
   "scripts": {
     "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",

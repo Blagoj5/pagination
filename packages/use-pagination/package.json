@@ -1,7 +1,7 @@
 {
   "name": "@bazhe/use-pagination",
   "version": "1.0.0",
-  "description": "Official React library for @thefakeorg",
+  "description": "React pagination hook for handling pagination logic",
   "author": "Blagoj Petrov",
   "repository": {
     "type": "git",

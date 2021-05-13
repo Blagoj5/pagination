@@ -2,7 +2,7 @@
 
 <!-- TODO: Add link to @bazhe/use-pagination, etc etc -->
 
-Utilities for handling your pagination. Used in: @bazhe/paginator, @bazhe/use-pagination, @bazhe/with-pagination, @bazhe/with-wrapper
+@bazhe/paginator provides utilities for handling your pagination. Used in: @bazhe/use-pagination, @bazhe/with-pagination, @bazhe/with-wrapper
 
 <!-- TODO: Full documentation on: link#use-pagination -->
 
