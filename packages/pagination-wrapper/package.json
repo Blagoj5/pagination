@@ -1,13 +1,14 @@
 {
   "name": "@bazhe/pagination-wrapper",
   "version": "1.0.0",
-  "description": "Official React library for @thefakeorg",
+  "description": "React Wrapper Component for handling your pagination",
   "author": "Blagoj Petrov",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mono/mono.git",
-    "directory": "packages/react"
+    "url": "https://github.com/Blagoj5/pagination.git",
+    "directory": "packages/pagination-wrapper"
   },
+  "homepage": "https://github.com/Blagoj5/pagination/tree/main/packages/pagination-wrapper",
   "scripts": {
     "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
     "build": "tsdx build --tsconfig tsconfig.build.json",
