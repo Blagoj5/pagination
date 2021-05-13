@@ -1,8 +1,6 @@
 # @bazhe/use-pagination
 
-<!-- TODO: Add link to @bazhe/paginator -->
-
-React hook for handling your pagination. Depends on @bazhe/paginator
+React hook for handling your pagination. Depends on: [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator)
 
 <!-- TODO: Full documentation on: link#use-pagination -->
 
