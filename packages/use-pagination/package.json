@@ -1,6 +1,6 @@
 {
   "name": "@bazhe/use-pagination",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React pagination hook for handling pagination logic",
   "author": "Blagoj Petrov",
   "repository": {
