@@ -1,6 +1,6 @@
 {
   "name": "@bazhe/pagination",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Pagination bundle/library that includes multiple pagination packages for react.js and vanilla javascript",
   "author": "Blagoj Petrov",
   "repository": {
@@ -27,10 +27,10 @@
     "react-dom": ">=16.0.0"
   },
   "dependencies": {
-    "@bazhe/paginator": "^1.1.0",
-    "@bazhe/use-pagination": "^1.1.0",
-    "@bazhe/pagination-wrapper": "^1.1.0",
-    "@bazhe/with-pagination": "^1.1.0",
+    "@bazhe/paginator": "^1.1.1",
+    "@bazhe/use-pagination": "^1.1.1",
+    "@bazhe/pagination-wrapper": "^1.1.1",
+    "@bazhe/with-pagination": "^1.1.1",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
