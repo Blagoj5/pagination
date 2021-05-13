@@ -1,0 +1,55 @@
+{
+  "name": "@bazhe/pagination",
+  "version": "1.0.0",
+  "description": "Pagination bundle/library that includes multiple pagination packages for react.js and vanilla javascript",
+  "author": "Blagoj Petrov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Blagoj5/pagination.git",
+    "directory": "packages/pagination"
+  },
+  "homepage": "https://github.com/Blagoj5/pagination/tree/main/packages/pagination",
+  "scripts": {
+    "start": "tsdx watch --tsconfig tsconfig.build.json --verbose --noClean",
+    "build": "tsdx build --tsconfig tsconfig.build.json",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepublish": "npm run build"
+  },
+  "main": "dist/index.js",
+  "module": "dist/react.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "README.md",
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "dependencies": {
+    "@bazhe/paginator": "^1.0.0",
+    "@bazhe/use-pagination": "^1.0.0",
+    "@bazhe/pagination-wrapper": "^1.0.0",
+    "@bazhe/with-pagination": "^1.0.0",
+    "tslib": "^2.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/react-hooks": "^5.1.2"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "pagination",
+    "hook",
+    "hooks",
+    "hoc",
+    "wrapper",
+    "utilities"
+  ]
+}
