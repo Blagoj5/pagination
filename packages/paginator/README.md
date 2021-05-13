@@ -118,8 +118,8 @@ The result from generatePaginator or Paginator.build:
 | has_next_page     | boolean             |
 | total_results     | number              | The length of the initial items                                                                                           |
 | results           | number              | Results per page                                                                                                          |
-| fi-st_result      | number              | First result is the index of the item that's first for the current page - items[first_result] (depends on link and limit) |
-| last-result       | number              | Last result is the index of the item that's last for the current page - items[last_result] (depends on link and limit)    |
+| first_result      | number              | First result is the index of the item that's first for the current page - items[first_result] (depends on link and limit) |
+| last_result       | number              | Last result is the index of the item that's last for the current page - items[last_result] (depends on link and limit)    |
 | limit             | number              | The limit of items per page                                                                                               |
 
 <br />
