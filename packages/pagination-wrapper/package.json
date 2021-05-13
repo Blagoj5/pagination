@@ -1,6 +1,6 @@
 {
   "name": "@bazhe/pagination-wrapper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React Wrapper Component for handling your pagination",
   "author": "Blagoj Petrov",
   "repository": {
@@ -28,8 +28,8 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@bazhe/paginator": "^1.1.0",
-    "@bazhe/use-pagination": "^1.1.0",
+    "@bazhe/paginator": "^1.1.1",
+    "@bazhe/use-pagination": "^1.1.1",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
