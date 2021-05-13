@@ -37,5 +37,13 @@
   "devDependencies": {
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.2"
-  }
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "pagination",
+    "hook",
+    "hooks"
+  ]
 }

@@ -39,5 +39,13 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/react-hooks": "^5.1.2",
     "utility-types": "^3.10.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "pagination",
+    "hoc",
+    "wrapper"
+  ]
 }

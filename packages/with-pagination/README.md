@@ -139,7 +139,7 @@ withPagination(WrappedComponent, paginationOptions) accepts 2 parameters:
 
 ### Pagination Result/Return
 
-The pagination hoc returns:
+Expected pagination props to the wrapped component:
 
 - **paginationResult:**
 

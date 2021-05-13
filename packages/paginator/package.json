@@ -28,5 +28,12 @@
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "typescript",
+    "pagination",
+    "utilities"
+  ]
 }
