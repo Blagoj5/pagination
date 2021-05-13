@@ -1,5 +1,9 @@
 name: Unit Test
-on: [push]
+on:
+  push:
+    branches: [main] # run on pushes to master
+    paths:
+      - "packages/**"
 jobs:
   test:
     name: Build and test on Node ${{ matrix.node }} and ${{ matrix.os }}
@@ -7,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ['10.x', '12.x', '14.x']
+        node: ["10.x", "12.x", "14.x"]
         os: [ubuntu-latest]
 
     steps:

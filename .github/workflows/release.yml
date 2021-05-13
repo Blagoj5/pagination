@@ -1,8 +1,9 @@
 name: Release
 on:
   push:
-    branches:
-      - main
+    branches: [main] # run on pushes to master
+    paths:
+      - "packages/**"
 jobs:
   release:
     runs-on: ubuntu-latest

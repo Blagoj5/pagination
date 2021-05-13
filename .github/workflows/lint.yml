@@ -1,5 +1,9 @@
 name: Lint
-on: [push]
+on:
+  push:
+    branches: [main] # run on pushes to master
+    paths:
+      - "packages/**"
 jobs:
   lint:
     runs-on: ubuntu-latest
