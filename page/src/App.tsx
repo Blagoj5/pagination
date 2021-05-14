@@ -1,6 +1,5 @@
 import { Box, ChakraProvider, extendTheme, Flex } from '@chakra-ui/react';
 import * as React from 'react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Drawer } from './components/modules/Drawer';
 import { Home } from './pages/Home';
 import './styles/main.css';
@@ -26,7 +25,6 @@ const theme = extendTheme({
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Box minH="100vh" bg="gray.50">
-      <ColorModeSwitcher justifySelf="flex-end" />
       <Flex d={{ lg: 'flex', base: 'block' }}>
         <Drawer />
         <Home />

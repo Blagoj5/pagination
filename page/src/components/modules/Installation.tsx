@@ -1,6 +1,6 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
+import { INSTALLATION_PREFIX } from '../../constants/id-prefixes';
+import { Markdown } from './markdowns/Markdown';
 
 interface InstallationProps {
   children?: any;
@@ -8,22 +8,24 @@ interface InstallationProps {
 
 const markdown = `## Installation    
 
-You can choose to install all packages and all utilities that come with the packages:
+### pagination
 
-~~~
+You can choose to install all pagination packages and all utilities that come with the packages (bundled in one):
+
+~~~bash
 npm install @bazhe/pagination
 or
 yarn install @bazhe/pagination
 ~~~
 
-or you can install each package individually:
+**or you can install each package individually:**
 
 
 ### use-pagination
 
-Just the hook, no hoc or wrappers (keep in mind that this also installs @bazhe/paginator):
+React hook for handling your pagination. Depends on: [@bazhe/paginator](#${INSTALLATION_PREFIX}paginator)
 
-~~~
+~~~bash
 npm install @bazhe/use-pagination
 or
 yarn install @bazhe/use-pagination
@@ -31,19 +33,29 @@ yarn install @bazhe/use-pagination
 
 ### with-pagination
 
-Just the HOC, no hooks or wrappers (keep in mind that this also installs @bazhe/paginator):
+React Higher-Order Component for handling your pagination. Depends on: [@bazhe/paginator](#${INSTALLATION_PREFIX}paginator)
 
-~~~
+~~~bash
 npm install @bazhe/with-pagination
 or
 yarn install @bazhe/with-pagination
 ~~~
 
+### pagination-wrapper
+
+React Wrapper Component for handling your pagination
+
+~~~bash
+npm install @bazhe/pagination-wrapper
+or
+yarn install @bazhe/pagination-wrapper
+~~~
+
 ### paginator
 
-Just the utility functions for building the pagination object itself:
+Utilities for handling your pagination. Used in: [@bazhe/use-pagination](#${INSTALLATION_PREFIX}use-pagination), [@bazhe/with-pagination](#${INSTALLATION_PREFIX}with-pagination), [@bazhe/pagination-wrapper](#${INSTALLATION_PREFIX}pagination-wrapper)
 
-~~~
+~~~bash
 npm install @bazhe/paginator
 or
 yarn install @bazhe/paginator
@@ -51,42 +63,6 @@ yarn install @bazhe/paginator
 
 `;
 
-// TODO: create markdown wrapper
-export const Installation: React.FC<InstallationProps> = ({}) => {
-  return (
-    <Box id="installation" as="section" w={{ base: '100%', lg: '80%' }}>
-      <ReactMarkdown
-        components={{
-          h1: ({ node, ...props }) => (
-            <Heading as="h1" size="xl" mb={4} {...props} />
-          ),
-          h2: ({ node, ...props }) => (
-            <Heading as="h2" size="lg" my={4} {...props} />
-          ),
-          h3: ({ node, ...props }) => (
-            <Heading as="h3" size="md" my={4} {...props} />
-          ),
-          h4: ({ node, ...props }) => (
-            <Heading as="h4" size="sm" my={4} {...props} />
-          ),
-          h5: ({ node, ...props }) => (
-            <Heading as="h5" size="xs" my={4} {...props} />
-          ),
-          pre: ({ node, ...props }) => (
-            <Box
-              as="pre"
-              py={4}
-              px={2}
-              shadow="inner"
-              bg="gray.100"
-              mb={4}
-              {...props}
-            />
-          ),
-          p: ({ node, ...props }) => <Text {...props} mb={1} />,
-        }}
-        children={markdown}
-      />
-    </Box>
-  );
+export const Installation: React.FC<InstallationProps> = () => {
+  return <Markdown markdown={markdown} prefix={INSTALLATION_PREFIX} />;
 };

@@ -1,4 +1,24 @@
+import { usePagination } from '@bazhe/use-pagination';
+import { FormLabel } from '@chakra-ui/form-control';
+import { Input } from '@chakra-ui/input';
+import {
+  Box,
+  Divider,
+  Flex,
+  Heading,
+  ListItem,
+  UnorderedList,
+  VStack,
+} from '@chakra-ui/layout';
+import {
+  NumberDecrementStepper,
+  NumberIncrementStepper,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+} from '@chakra-ui/react';
 import React from 'react';
+import { PrimaryButton } from '../elements/PrimaryButton';
 
 interface PlaygroundProps {}
 
@@ -12,111 +32,174 @@ const defaultItems = [
   'item-seven',
 ];
 
-// export const Playground: React.FC<PlaygroundProps> = ({}) => {
-//   const {
-//     paginationResult,
-//     nextPage,
-//     previousPage,
-//     setCurrentPage,
-//     setItems,
-//   } = usePagination({
-//     items: defaultItems,
-//     limit: 2,
-//   });
-//   const inputRef = React.useRef<HTMLInputElement>(null);
+export const Playground: React.FC<PlaygroundProps> = () => {
+  const {
+    paginationResult,
+    nextPage,
+    previousPage,
+    setCurrentPage,
+    setItems,
+  } = usePagination({
+    items: defaultItems,
+    limit: 2,
+  });
+  const inputRef = React.useRef<HTMLInputElement>(null);
 
-//   const removeHandler = (item: string) => {
-//     if (!paginationResult.all_items) return;
+  const removeHandler = (item: string) => {
+    if (!paginationResult.all_items) return;
 
-//     setItems(paginationResult.all_items?.filter(_item => _item !== item));
-//   };
+    setItems(paginationResult.all_items?.filter(_item => _item !== item));
+  };
 
-//   return (
-//     <div
-//       data-test-id="hook"
-//       className="max-h-5xl w-full max-w-2xl shadow-md rounded-lg mb-14"
-//     >
-//       <h2 className="text-center bg-blue-500 text-xl text-white p-4 rounded-t-lg">
-//         Pagination data and methods:{' '}
-//       </h2>
-//       <div className="bg-white p-8 flex rounded-b-lg">
-//         <div className="border-r-2 border-gray-100 pr-2">
-//           <p className="text-lg text-center">Data:</p>
-//           <pre className="text-sm">
-//             {JSON.stringify(paginationResult, null, 2)}
-//           </pre>
-//         </div>
-//         <div className="w-full text-center">
-//           <p className="text-lg mb-4 text-center">Methods:</p>
-//           <div className="flex justify-evenly mb-4">
-//             <button
-//               className="w-32 p-2 bg-blue-500 rounded-md text-white"
-//               onClick={() => previousPage()}
-//             >
-//               Prev Page
-//             </button>
-//             <button
-//               className="w-32 p-2 bg-blue-500 rounded-md text-white"
-//               onClick={() => nextPage()}
-//             >
-//               Next Page
-//             </button>
-//           </div>
-//           <div className="mb-4">
-//             <label htmlFor="current-page">Set current page</label>
-//             <input
-//               id="current-page"
-//               type="number"
-//               placeholder="Set current page"
-//               value={paginationResult.current_page}
-//               onChange={e => setCurrentPage(+e.target.value)}
-//               className="shadow-lg mt-4 border-2 border-gray-100"
-//               ref={inputRef}
-//             />
-//           </div>
-//           <div>
-//             <form
-//               className="mb-4"
-//               onSubmit={e => {
-//                 e.preventDefault();
-//                 if (!paginationResult.all_items || !inputRef.current) return;
+  return (
+    <Box
+      id="playground"
+      w="90%"
+      maxW="900px"
+      shadow="xl"
+      rounded="2xl"
+      alignItems="stretch"
+      maxH={{ base: '100vh', md: 'fit-content' }}
+      overflowY="auto"
+    >
+      <Heading
+        as="h2"
+        bg="primary.main"
+        color="white"
+        size="lg"
+        p={4}
+        roundedTop="2xl"
+        textAlign="center"
+      >
+        Pagination data and methods:{' '}
+      </Heading>
+      <Flex
+        direction={{ base: 'column', md: 'row' }}
+        roundedBottom="2xl"
+        p={4}
+        justify="space-between"
+      >
+        <VStack w="100%" spacing={4} m={2}>
+          <Heading as="h4" size="md" textAlign="center">
+            Methods:
+          </Heading>
+          <Divider />
+          <Flex w="100%" justify="center" mt={0}>
+            <PrimaryButton
+              onClick={() => previousPage()}
+              mr={8}
+              isDisabled={!paginationResult.has_previous_page}
+            >
+              Prev Page
+            </PrimaryButton>
+            <PrimaryButton
+              onClick={() => nextPage()}
+              isDisabled={!paginationResult.has_next_page}
+            >
+              Next Page
+            </PrimaryButton>
+          </Flex>
+          <Divider />
+          <div className="mb-4">
+            <FormLabel htmlFor="current-page">Set current page</FormLabel>
+            <NumberInput
+              id="current-page"
+              placeholder="Set current page"
+              value={paginationResult.current_page}
+              onChange={(_, value) => setCurrentPage(value)}
+            >
+              <NumberInputField />
+              <NumberInputStepper>
+                <NumberIncrementStepper />
+                <NumberDecrementStepper />
+              </NumberInputStepper>
+            </NumberInput>
+          </div>
+          <Divider />
+          <Box w="100%">
+            <Box as="form" className="mb-4" mb={4}>
+              <FormLabel htmlFor="items">Add/Remove items:</FormLabel>
+              <Flex>
+                <Input
+                  ref={inputRef}
+                  id="items"
+                  type="text"
+                  placeholder="Add item"
+                  roundedRight="none"
+                />
+                <PrimaryButton
+                  type="submit"
+                  onClick={e => {
+                    e.preventDefault();
+                    if (!paginationResult.all_items || !inputRef.current)
+                      return;
 
-//                 setItems([
-//                   ...paginationResult.all_items,
-//                   inputRef.current.value,
-//                 ]);
-//               }}
-//             >
-//               <label htmlFor="items">Add/Remove items:</label>
-//               <input
-//                 ref={inputRef}
-//                 id="items"
-//                 type="text"
-//                 placeholder="Add item"
-//                 className="shadow-lg mt-4 border-2 border-gray-100"
-//               />
-//               <button type="submit">+</button>
-//             </form>
-//             <ul className="mx-auto w-5/6 max-h-32 overflow-y-auto shadow-md">
-//               {paginationResult.all_items?.map((item, index) => (
-//                 <li
-//                   className="p-1 border-b-2 border-blue-50 mb-2 cursor-pointer transition duration-75 hover:bg-red-300 flex justify-between"
-//                   key={item + index}
-//                   onClick={() => removeHandler(item)}
-//                 >
-//                   <p>{item}</p>
-//                   <p>-</p>
-//                 </li>
-//               ))}
-//             </ul>
-//             {/* Here add the list of items */}
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-export const Playground = () => {
-  return <div>PLAYGROUND</div>;
+                    setItems([
+                      ...paginationResult.all_items,
+                      inputRef.current.value,
+                    ]);
+                  }}
+                  roundedLeft="none"
+                >
+                  +
+                </PrimaryButton>
+              </Flex>
+            </Box>
+            <UnorderedList
+              className="mx-auto w-5/6 max-h-32 overflow-y-auto shadow-md"
+              listStyleType="none"
+              shadow="inner"
+              border="1px solid"
+              borderColor="gray.100"
+              ml={0}
+              maxH="250px"
+              overflowY="auto"
+            >
+              {paginationResult.all_items?.map((item, index) => (
+                <ListItem
+                  p={4}
+                  key={item + index}
+                  onClick={() => removeHandler(item)}
+                  textAlign="center"
+                  borderBottom="1px solid"
+                  borderColor="gray.200"
+                  cursor="pointer"
+                  transition="all 0.2s"
+                  css={`
+                    :hover {
+                      position: relative;
+                      :before {
+                        position: absolute;
+                        content: 'Remove';
+                        background: #fda1a1;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: white;
+                      }
+                    }
+                  `}
+                >
+                  {item}
+                </ListItem>
+              ))}
+            </UnorderedList>
+          </Box>
+        </VStack>
+        <Divider orientation="vertical" height="auto" />
+        <Box pl={3}>
+          <Heading as="h4" size="md" textAlign="center">
+            Data:
+          </Heading>
+          <pre style={{ fontSize: '14px' }}>
+            {JSON.stringify(paginationResult, null, 2)}
+          </pre>
+        </Box>
+      </Flex>
+    </Box>
+  );
 };
