@@ -5,6 +5,31 @@ import { PrimaryButton } from './PrimaryButton';
 
 const items = ['a', 'b', 'c'];
 
+export const PaginationWrapper = () => {
+  // With children callback
+  return (
+    <Pagination paginationOptions={{ items, limit: 2 }}>
+      {props => <Playground {...props} />}
+    </Pagination>
+  );
+
+  // Another example
+  // OR
+  // return (<Pagination paginationOptions={{items, limit: 2}}>
+  //   {({nextPage, paginationResult, previousPage, setCurrentPage, setItems }) => {
+  //     // do something with the data from above
+  //     // ...
+  //     // return anything / JSX ... / string etc...
+  //   }
+  // </Pagination>)
+
+  // With render prop
+  // OR
+  // return (
+  //   <Pagination paginationOptions={{ items, limit: 2 }} render={Playground} />
+  // );
+};
+
 const Playground: React.FC<PaginationResults<typeof items[0]>> = ({
   paginationResult,
   nextPage,
@@ -105,29 +130,4 @@ const Playground: React.FC<PaginationResults<typeof items[0]>> = ({
       </div>
     </div>
   );
-};
-
-export const PaginationWrapper = () => {
-  // With children callback
-  return (
-    <Pagination paginationOptions={{ items, limit: 2 }}>
-      {props => <Playground {...props} />}
-    </Pagination>
-  );
-
-  // Another example
-  // OR
-  // return (<Pagination paginationOptions={{items, limit: 2}}>
-  //   {({nextPage, paginationResult, previousPage, setCurrentPage, setItems }) => {
-  //     // do something with the data from above
-  //     // ...
-  //     // return anything / JSX ... / string etc...
-  //   }
-  // </Pagination>)
-
-  // With render prop
-  // OR
-  // return (
-  //   <Pagination paginationOptions={{ items, limit: 2 }} render={Playground} />
-  // );
 };
