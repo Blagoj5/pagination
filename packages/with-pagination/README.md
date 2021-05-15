@@ -2,7 +2,8 @@
 
 React Higher-Order Component for handling your pagination
 
-<!-- TODO: Full documentation on: link#use-pagination -->
+**Playground/Demo:** https://blagoj5.github.io/pagination/#playground  
+**Full documentation:** https://blagoj5.github.io/pagination
 
 ## Getting Started
 
@@ -43,8 +44,8 @@ import { withPagination } from '@bazhe/with-pagination';
 
 ### Initialization
 
-Syntax: **withPagination(WrappedComponent, paginationOptions)**  
-Check API section for paginationOptions
+**Syntax:** withPagination(WrappedComponent, [paginationOptions](https://blagoj5.github.io/pagination/#pagination-options))  
+**Returns:** [PaginationResult](https://blagoj5.github.io/pagination/#pagination-result/return) as props to the wrapped component
 
 Function based components:
 
@@ -164,14 +165,15 @@ Expected pagination props to the wrapped component:
 
 <br />
 
-#### Methods for handling state:
+- **Pagination handlers for managing state**
 
-- **setCurrentPage**: (n: number) => void (function for changing the current page)
-
-- **setItems**: (items: T[]) => void (function for changing items),
-- **setPageAndItems**: (payload: { items: I[]; currentPage: number }) => void (function for changing current page and the items themselves)
-- **nextPage**: () => void (function for changing to next page),
-- **previousPage**: () => dispatch(function for changing to the previous page),
+| Name            | Type                                                   | Description                                                         |
+| --------------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
+| setCurrentPage  | (n: number) => void                                    | Function handler for changing the current page                      |
+| setItems        | (items: T[]) => void                                   | Function handler for changing the items                             |
+| setPageAndItems | (payload: { items: I[]; currentPage: number }) => void | Function handler for changing current page and the items themselves |
+| nextPage        | () => void                                             | Function handler for changing to next page                          |
+| previousPage    | () => void                                             | Function handler for changing to previous page                      |
 
 ## Built With
 

@@ -2,8 +2,8 @@
 
 Pagination bundle/library that includes multiple pagination packages for react.js and vanilla javascript
 
-<!-- TODO: add playground link everywhere -->
-<!-- TODO: Full documentation on: link#use-pagination -->
+**Playground/Demo:** https://blagoj5.github.io/pagination/#playground  
+**Full documentation:** https://blagoj5.github.io/pagination
 
 ## Getting Started
 

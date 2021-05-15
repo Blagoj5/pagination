@@ -2,8 +2,8 @@
 
 React hook for handling your pagination. Depends on: [@bazhe/paginator](https://www.npmjs.com/package/@bazhe/paginator)
 
-<!-- TODO: add playground link everywhere -->
-<!-- TODO: Full documentation on: link#use-pagination -->
+**Playground/Demo:** https://blagoj5.github.io/pagination/#playground  
+**Full documentation:** https://blagoj5.github.io/pagination
 
 ## Getting Started
 
@@ -42,9 +42,8 @@ import { usePagination } from '@bazhe/use-pagination';
 
 ### Initialization
 
-<!-- TODO: add link to pagination options -->
-
-Syntax: **usePagination(paginationOptions)**
+**Syntax:** usePagination([paginationOptions](https://blagoj5.github.io/pagination/#pagination-options))  
+**Returns:** [PaginationResult](https://blagoj5.github.io/pagination/#pagination-result/return)
 
 ```js
 export const PaginationHookDemo: React.FC = () => {
@@ -113,14 +112,15 @@ The result from usePagination hook:
 
 <br />
 
-#### Pagination methods for handling state:
+- **Pagination handlers for managing state**
 
-- **setCurrentPage**: (n: number) => void (function for changing the current page)
-
-- **setItems**: (items: T[]) => void (function for changing items),
-- **setPageAndItems**: (payload: { items: I[]; currentPage: number }) => void (function for changing current page and the items themselves)
-- **nextPage**: () => void (function for changing to next page),
-- **previousPage**: () => dispatch(function for changing to the previous page),
+| Name            | Type                                                   | Description                                                         |
+| --------------- | ------------------------------------------------------ | ------------------------------------------------------------------- |
+| setCurrentPage  | (n: number) => void                                    | Function handler for changing the current page                      |
+| setItems        | (items: T[]) => void                                   | Function handler for changing the items                             |
+| setPageAndItems | (payload: { items: I[]; currentPage: number }) => void | Function handler for changing current page and the items themselves |
+| nextPage        | () => void                                             | Function handler for changing to next page                          |
+| previousPage    | () => void                                             | Function handler for changing to previous page                      |
 
 ## Built With
 

@@ -1,10 +1,9 @@
 # @bazhe/paginator
 
-<!-- TODO: Add link to @bazhe/use-pagination, etc etc -->
+@bazhe/paginator provides utilities for handling your pagination. Used in: [@bazhe/use-pagination](https://www.npmjs.com/package/@bazhe/use-pagination), [@bazhe/with-pagination](https://www.npmjs.com/package/@bazhe/with-pagination), [@bazhe/pagination-wrapper](https://www.npmjs.com/package/@bazhe/pagination-wrapper)
 
-@bazhe/paginator provides utilities for handling your pagination. Used in: @bazhe/use-pagination, @bazhe/with-pagination, @bazhe/with-wrapper
-
-<!-- TODO: Full documentation on: link#use-pagination -->
+**Playground/Demo:** https://blagoj5.github.io/pagination/#playground  
+**Full documentation:** https://blagoj5.github.io/pagination
 
 ## Getting Started
 
@@ -93,7 +92,7 @@ API for:
 | Name                                        | Type                                                                                | Description                                                                                     |
 | ------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | constructor(perPage: number, links: number) |                                                                                     | The constructor that creates paginator object. Example: new Paginator(4, 10)                    |
-| build                                       | \<T>(total_results: number, current_page?: number, items?: T[]) => PaginationResult | The main methods that returns the fully expected pagination result                              |
+| build                                       | \<T>(total_results: number, current_page?: number, items?: T[]) => PaginationResult | The main method that returns the fully expected pagination result                               |
 | getFirstPage                                | (currentPage: number) => number                                                     | Gets first page, depending on the number of links (ex. buttons displayed in the pagination bar) |
 | getLastPage                                 | (currentPage: number) => number                                                     | Gets last page, depending on the number of links (ex. buttons displayed in the pagination bar)  |
 | getFirstResult                              | (currentPage: number) => number                                                     | Gets first result/index, depending on the limit/perPage and current page                        |
