@@ -4,7 +4,7 @@ on:
     branches: [main] # run on pushes to master
     paths:
       - "packages/**"
-      - "changeset/**"
+      - ".changeset/**"
 jobs:
   release:
     runs-on: ubuntu-latest
