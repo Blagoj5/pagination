@@ -1,5 +1,14 @@
 # @bazhe/pagination
 
+## 1.2.1
+
+### Patch Changes
+
+- [`b6df785`](https://github.com/Blagoj5/pagination/commit/b6df785cc82184307b7486f0fbfed1da81bd38c3) Thanks [@Blagoj5](https://github.com/Blagoj5)! - Update readme
+
+- Updated dependencies [[`b6df785`](https://github.com/Blagoj5/pagination/commit/b6df785cc82184307b7486f0fbfed1da81bd38c3)]:
+  - @bazhe/pagination-wrapper@1.2.1
+
 ## 1.2.0
 
 ### Minor Changes

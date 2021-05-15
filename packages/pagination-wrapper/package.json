@@ -1,6 +1,6 @@
 {
   "name": "@bazhe/pagination-wrapper",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React Wrapper Component for handling your pagination",
   "author": "Blagoj Petrov",
   "repository": {
