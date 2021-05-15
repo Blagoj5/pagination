@@ -1,5 +1,16 @@
 # @bazhe/use-pagination
 
+## 1.2.0
+
+### Minor Changes
+
+- [`ac9b24e`](https://github.com/Blagoj5/pagination/commit/ac9b24ecea946ede610ca9ef5b54aa05cd00bc0e) Thanks [@Blagoj5](https://github.com/Blagoj5)! - Update readmes
+
+### Patch Changes
+
+- Updated dependencies [[`ac9b24e`](https://github.com/Blagoj5/pagination/commit/ac9b24ecea946ede610ca9ef5b54aa05cd00bc0e)]:
+  - @bazhe/paginator@1.2.0
+
 ## 1.1.1
 
 ### Patch Changes
