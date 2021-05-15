@@ -1,4 +1,4 @@
-# @bazhe/use-pagination
+# @bazhe/pagination
 
 Pagination bundle/library that includes multiple pagination packages for react.js and vanilla javascript
 

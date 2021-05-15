@@ -1,4 +1,4 @@
-# @bazhe/with-pagination
+# @bazhe/pagination-wrapper
 
 React Wrapper Component for handling your pagination
 
