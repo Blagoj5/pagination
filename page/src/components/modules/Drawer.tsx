@@ -80,6 +80,32 @@ const content = [
       },
     ],
   },
+  {
+    id: 'more-info',
+    name: 'More Info',
+    subContent: [
+      {
+        id: 'prerequisites',
+        name: 'Prerequisites',
+      },
+      {
+        id: 'versioning',
+        name: 'Versioning',
+      },
+      {
+        id: 'authors',
+        name: 'Authors',
+      },
+      {
+        id: 'security',
+        name: 'Security',
+      },
+      {
+        id: 'license',
+        name: 'License',
+      },
+    ],
+  },
 ];
 
 export const Drawer: React.FC<DrawerProps> = () => {

@@ -120,8 +120,6 @@ export const PaginationHocHookDemo = withPagination(FunctionalBasedComponent, {
 ~~~jsx
 const fakeData = [1, 2, 3]
 
-const fakeData = [1, 2, 3]
-
 class ClassBasedComponent extends React.Component<
   WithPaginationProps<typeof fakeData[0]>
 > {
@@ -164,6 +162,15 @@ import { Pagination } from '@bazhe/pagination-wrapper';
 ~~~
 
 #### Initialization
+
+**Syntax:** \\<Pagination paginationOptions={[paginationOptions](https://blagoj5.github.io/pagination/#pagination-options)} render={WrappedComponent} />  
+or  
+**Syntax:** \\<Pagination  
+paginationOptions={[paginationOptions](#pagination-options)}>  
+{([paginationResult](#pagination-result/return)) => (\\<WrappedComponent {...paginationResult} />)}  
+\\</Pagination>
+
+**Returns:** [PaginationResult](https://blagoj5.github.io/pagination/#pagination-result/return) as props to the wrapped component (if render method is used) or as the first argument in the children callback function
 
 ~~~jsx
 const Playground = (props) => {
