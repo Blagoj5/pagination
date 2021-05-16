@@ -99,7 +99,19 @@ export const Markdown: React.FC<MarkdownProps> = ({
           li: ({ node, ordered, ...props }) => <ListItem {...props} />,
           // Table
           table: ({ node, ...props }) => (
-            <Table variant="simple" {...props} shadow="lg" mt={2} mb={4} />
+            <Table
+              variant="simple"
+              {...props}
+              shadow="lg"
+              mt={2}
+              mb={4}
+              overflowX="auto"
+              w="full"
+              d={{
+                base: 'block',
+                md: 'table',
+              }}
+            />
           ),
           thead: ({ node, ...props }) => (
             <Thead
@@ -114,20 +126,20 @@ export const Markdown: React.FC<MarkdownProps> = ({
               {...props}
             />
           ),
-          tr: ({ node, ...props }) => (
+          tr: ({ node, isHeader, ...props }) => (
             <Tr
               // variant="simple"
               {...props}
             />
           ),
-          th: ({ node, ...props }) => (
+          th: ({ node, isHeader, ...props }) => (
             <Th
               color="white"
               // variant="simple"
               {...props}
             />
           ),
-          td: ({ node, ...props }) => (
+          td: ({ node, isHeader, ...props }) => (
             <Td
               // variant="simple"
               {...props}
