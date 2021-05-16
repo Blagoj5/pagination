@@ -1,6 +1,7 @@
 import { Box, ChakraProvider, extendTheme, Flex } from '@chakra-ui/react';
 import * as React from 'react';
 import { Drawer } from './components/modules/Drawer';
+import GoogleAnalytics from './components/modules/GoogleAnalytics';
 import { Home } from './pages/Home';
 import './styles/main.css';
 
@@ -24,6 +25,7 @@ const theme = extendTheme({
 
 export const App = () => (
   <ChakraProvider theme={theme}>
+    <GoogleAnalytics />
     <Box minH="100vh" bg="gray.50">
       <Flex d={{ lg: 'flex', base: 'block' }}>
         <Drawer />

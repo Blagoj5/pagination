@@ -2,6 +2,7 @@ import { Box, Heading, Text, Link, VStack, Divider } from '@chakra-ui/react';
 import React from 'react';
 import { Api } from '../components/modules/Api';
 import { Installation } from '../components/modules/Installation';
+import { MoreInfo } from '../components/modules/MoreInfo';
 import { Playground } from '../components/modules/Playground';
 import { Usage } from '../components/modules/Usage';
 
@@ -25,7 +26,10 @@ export const Home: React.FC = () => {
         <Installation />
         <Divider />
         <Usage />
+        <Divider />
         <Api />
+        <Divider />
+        <MoreInfo />
       </VStack>
     </Box>
   );
