@@ -1,5 +1,11 @@
 # @bazhe/paginator
 
+## 1.2.1
+
+### Patch Changes
+
+- [`853ad6e`](https://github.com/Blagoj5/pagination/commit/853ad6e65bd14f39439be21a5ad653bb12e26b51) Thanks [@Blagoj5](https://github.com/Blagoj5)! - Update documentation
+
 ## 1.2.0
 
 ### Minor Changes

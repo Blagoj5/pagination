@@ -1,6 +1,6 @@
 {
   "name": "@bazhe/with-pagination",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "React Higher-Order Component for handling your pagination",
   "author": "Blagoj Petrov",
   "repository": {
@@ -28,8 +28,8 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@bazhe/paginator": "^1.2.0",
-    "@bazhe/use-pagination": "^1.2.0",
+    "@bazhe/paginator": "^1.2.1",
+    "@bazhe/use-pagination": "^1.2.1",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
